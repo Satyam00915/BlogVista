@@ -1,9 +1,19 @@
-import { InfiniteMovingCards } from "./ui/infinite-moving-cards"
+"use client";
 
+import { InfiniteMovingCards } from "./ui/infinite-moving-cards"
+import {motion } from "framer-motion"
 const Reviews = () => {
   return (
     <div>
-      <h1 className="text-4xl font-bold text-center mb-8">What Do People Say About Us?</h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-5xl font-bold text-center mb-8 pt-5"
+          >
+            What Do People Say About Us?
+          </motion.h1>
       <div className="h-[40rem] rounded-md flex flex-col antialiased bg-transparent dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards
         items={testimonials}

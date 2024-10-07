@@ -5,7 +5,7 @@ const Authptions = () => {
     <div className="flex justify-around gap-5">
         <div className="text-lg">
           <Button
-            className="bg-black text-white font-semibold text-xl"
+            className="bg-transparent text-white font-semibold text-xl"
             href="/signin"
           >
             LogIn
@@ -13,7 +13,7 @@ const Authptions = () => {
         </div>
         <div className="text-lg">
           <Button
-            className="bg-black text-white font-semibold text-xl"
+            className="bg-transparemt text-white font-semibold text-xl"
             href="/signup"
           >
             SignUp
