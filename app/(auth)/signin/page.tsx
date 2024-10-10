@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { Input } from "@/components/ui/input";
 
 const Page = () => {
   const [email, setEmail] = useState("");
@@ -12,20 +13,20 @@ const Page = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-full bg-gray-100">
+    <div className="flex justify-center items-center h-full bg-gray-900">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 mt-8 rounded-lg shadow-md w-96 flex flex-col gap-5"
+        className="bg-gray-800 p-8 mt-8 rounded-lg shadow-md w-96 flex flex-col gap-5"
       >
-        <h2 className="text-4xl font-bold mb-6 text-center">Sign In</h2>
+        <h2 className="text-4xl font-bold mb-6 text-center text-white">Sign In</h2>
         <div className="mb-4">
           <label
             htmlFor="email"
-            className="block mb-2 font-medium text-xl text-gray-700"
+            className="block mb-2 font-medium text-xl text-gray-300"
           >
             Email
           </label>
-          <input
+          <Input
             type="email"
             id="email"
             value={email}
@@ -37,12 +38,12 @@ const Page = () => {
         <div className="mb-6">
           <label
             htmlFor="password"
-            className="block mb-2 text-xl font-medium text-gray-700"
+            className="block mb-2 text-xl font-medium text-gray-300"
           >
             Password
           </label>
           <div className="relative">
-            <input
+            <Input
               type={showPassword ? "text" : "password"}
               id="password"
               value={password}
@@ -53,7 +54,7 @@ const Page = () => {
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute inset-y-0 right-0 pr-3 flex items-center text-base leading-5"
+              className="absolute inset-y-0 right-0 pr-3 flex items-center text-base leading-5 text-gray-300"
             >
               {showPassword ? "Hide" : "Show"}
             </button>
@@ -65,8 +66,8 @@ const Page = () => {
         >
           Sign In
         </button>
-        <p className="text-center text-lg mt-4">
-          Don't have an account? <Link href="/signup" className="text-blue-500 hover:underline">Sign up</Link>
+        <p className="text-center text-lg mt-4 text-gray-300">
+          Don't have an account? <Link href="/signup" className="text-blue-400 hover:underline">Sign up</Link>
         </p>
       </form>
     </div>
